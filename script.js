@@ -48,6 +48,7 @@ function replacer(match) {
 }
 
 function onEncryptClick() {
+    showCopyButton()
     if (shouldAnimate()) {
         animatedTextQueue(encrypt(getText()));
         return;
@@ -60,6 +61,7 @@ function onEncryptClick() {
     clearText();
 }
 function onDecryptClick() {
+    showCopyButton()
     if (shouldAnimate()) {
         animatedTextQueue(decrypt(getText()));
         return;
@@ -70,6 +72,10 @@ function onDecryptClick() {
         )
     );
     clearText();
+}
+
+function showCopyButton() {
+    document.getElementById('copy-btn').classList.remove('hide')
 }
 
 function onCopyClick() {
