@@ -21,6 +21,9 @@ function getResult() {
     return document.getElementById('result').innerText;
 }
 
+/*  String.replace permite utilizar uma função para fazer
+    a substituição dos textos */
+
 function encrypt(text) {
     return text.replace(/a|e|i|o|u/g, replacer);
 }

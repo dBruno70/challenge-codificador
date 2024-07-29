@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="header-container default-margin">
-        <div>Logo</div>
+    <header class="header-container top-level-padding">
+        <div>
+            <img src="assets/logo_alura.svg" alt="logotipo">
+        </div>
         <div class="options-container">
             <span id="settings-icon">Opções:</span>
             <ul>
@@ -19,18 +21,19 @@
             </ul>
         </div>
     </header>
-    <main class="main-container default-margin">
-        <div class="textarea-container">
-            <textarea placeholder="Digite o texto aqui" id="main-textarea"></textarea>
-            <p>Apenas letras minúsculas e sem acento.</p>
-            <div class="btn-container">
+    <main class="main-container top-level-padding">
+        <div class="textarea-column">
+                <textarea placeholder="Digite o texto aqui" id="main-textarea"></textarea>
+                <p>Apenas letras minúsculas e sem acento.</p>
+            <div class="btn-container btn-container-padding">
                 <button id="encrypt-btn" class="btn btn-dark">Criptografar</button>
                 <button id="decrypt-btn" class="btn btn-light">Descriptografar</button>
             </div>
         </div>
-        <div class="result-container">
-            <div id="result">
+        <div class="result-column">
+            <div id="result" class="result-container">
                 <div class="result-default">
+                    <img src="assets/magnify_illustration.svg" alt="ilustração" id="illustration">
                     <h3>Nenhuma mensagem encontrada</h3>
                     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
