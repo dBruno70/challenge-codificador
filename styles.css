@@ -16,9 +16,14 @@
     --light-blue-300: #e9ecf8;
     --light-blue-400: #aab2d5;
     --light-blue-500: #757fb2;
+
+    --bg-color: var(--light-blue-100);
+    --txt-color: var(--gray-400);
+    --textarea-text-color: #0A3871;
 }
 body {
-    background-color: var(--light-blue-100);
+    background-color: var(--bg-color);
+    color: var(--txt-color);
 }
 
 .btn {
@@ -26,7 +31,7 @@ body {
     border-radius: 1.5rem;
     font-weight: 400;
     border: none;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     transition: .2s;
 }
 
@@ -46,4 +51,14 @@ body {
 
 .btn-dark:hover {
     background-color: var(--dark-blue-400);
+}
+
+#main-textarea {
+    background-color: var(--bg-color);
+    color: var(--textarea-text-color);
+    border: none;
+}
+
+#main-textarea::placeholder {
+    color: var(--textarea-text-color);
 }
