@@ -108,11 +108,13 @@ function animatedTextQueue(text) {
     setResult("");
     clearText();
 
+    const intervalMs = parseInt(document.getElementById('text-speed-slider').value)
+
     interval = setInterval(function () {
         if (chars.length < 1) return animatedTextStop();
         const c = chars.shift()
         setResult(getResult() + c);
-    }, 50);
+    }, 100 - intervalMs);
 }
 
 function animatedTextStop() {

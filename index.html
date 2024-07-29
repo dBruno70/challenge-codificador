@@ -11,12 +11,19 @@
         <div>
             <img src="assets/logo_alura.svg" alt="logotipo">
         </div>
-        <div class="options-container">
-            <span id="settings-icon">Opções:</span>
-            <ul>
+        <div class="options-container fancy-border">
+            <div class="options-heading">
+                <img src="assets/bi_gear-fill.svg" alt="">
+                <h2>Opções</h2>
+            </div>
+            <ul class="options-list">
                 <li>
-                    <input type="checkbox" id="text-animation-check"/>
                     <label for="text-animation-check">Animação de texto</label>
+                    <input type="checkbox" id="text-animation-check"/>
+                </li>
+                <li>
+                    <label for="text-speed-slider">Velocidade do texto</label>
+                    <input type="range" id="text-speed-slider" value="75" />
                 </li>
             </ul>
         </div>
@@ -24,18 +31,21 @@
     <main class="main-container top-level-padding">
         <div class="textarea-column">
                 <textarea placeholder="Digite o texto aqui" id="main-textarea"></textarea>
-                <p>Apenas letras minúsculas e sem acento.</p>
+                <div class="guide-text-container">
+                    <img class="exclamation" src="assets/bi_exclamation-circle-fill.svg">
+                    <p class="guide-text">Apenas letras minúsculas e sem acento.</p>
+                </div>
             <div class="btn-container btn-container-padding">
                 <button id="encrypt-btn" class="btn btn-dark">Criptografar</button>
                 <button id="decrypt-btn" class="btn btn-light">Descriptografar</button>
             </div>
         </div>
-        <div class="result-column">
+        <div class="result-column fancy-border">
             <div id="result" class="result-container">
                 <div class="result-default">
                     <img src="assets/magnify_illustration.svg" alt="ilustração" id="illustration">
                     <h3>Nenhuma mensagem encontrada</h3>
-                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <p class="guide-text">Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
             </div>
             <div class="btn-container">
@@ -43,6 +53,9 @@
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <p>Desenvolvido por Bruno A. Dolberth</p>
+    </footer>
 
     <script src="./script.js"></script>
 </body>
