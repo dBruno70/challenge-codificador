@@ -6,7 +6,7 @@ function init() {
 
 function getText() {
     const area = document.getElementById('main-textarea');
-    return area.value;
+    return area.value.toLowerCase();
 }
 
 function clearText() {
@@ -48,6 +48,10 @@ function replacer(match) {
 }
 
 function onEncryptClick() {
+    if (shouldAnimate()) {
+        animatedTextQueue(encrypt(getText()));
+        return;
+    }
     setResult(
         encrypt(
             getText()
@@ -56,6 +60,10 @@ function onEncryptClick() {
     clearText();
 }
 function onDecryptClick() {
+    if (shouldAnimate()) {
+        animatedTextQueue(decrypt(getText()));
+        return;
+    }
     setResult(
         decrypt(
             getText()
@@ -78,10 +86,29 @@ function onCopyClick() {
 
 // Extra: Animação de texto
 
+function shouldAnimate() {
+    return !!document.getElementById('text-animation-check').checked;
+}
+
 let interval = null;
 
-function animatedTextQueue(text) {}
-function animatedTextStop() {}
+function animatedTextQueue(text) {
+    const chars = text.split("");
+
+    clearInterval(interval);
+    setResult("");
+    clearText();
+
+    interval = setInterval(function () {
+        if (chars.length < 1) return animatedTextStop();
+        const c = chars.shift()
+        setResult(getResult() + c);
+    }, 50);
+}
+
+function animatedTextStop() {
+    clearInterval(interval);
+}
 
 
 init();
