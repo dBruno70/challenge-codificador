@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador/Decodificador de Texto</title>
+</head>
+<body>
+    <header>
+        <div>Logo</div>
+        <div>
+            <span id="settings-icon">Settings</span>
+            <ul>
+                <li>
+                    <input type="checkbox" id="text-animation-check"/>
+                    <label for="text-animation-check">Animação de texto</label>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <p>Apenas letras minúsculas e sem acento.</p>
+        <textarea placeholder="Digite o texto aqui" id="main-textarea"></textarea>
+        <button id="encrypt-btn">Codificar</button>
+        <button id="decrypt-btn">Descodificar</button>
+        <p id="result">Resultado</p>
+        <button id="copy-btn">Copiar</button>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
