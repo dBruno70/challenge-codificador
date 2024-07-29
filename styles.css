@@ -183,11 +183,16 @@ body {
     margin-top: 2rem;
 }
 
+@media (max-width: 1050px) {
+    .main-container {
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 950px) {
     .main-container {
         flex-direction: column;
         gap: 2rem;
-        margin-left: 0;
     }
 
     .textarea-column {
